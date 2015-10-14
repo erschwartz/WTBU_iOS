@@ -13,7 +13,7 @@
 		3E17B4541BC4993A00FE1B94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E17B4521BC4993A00FE1B94 /* LaunchScreen.storyboard */; };
 		3E17B45F1BC4993A00FE1B94 /* WBTUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E17B45E1BC4993A00FE1B94 /* WBTUTests.swift */; };
 		3E17B46A1BC4993A00FE1B94 /* WBTUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E17B4691BC4993A00FE1B94 /* WBTUUITests.swift */; };
-		3E893FA71BCDD138000AF4E8 /* StationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E893FA61BCDD138000AF4E8 /* StationsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3E893FA71BCDD138000AF4E8 /* WBTU in Sources */ = {isa = PBXBuildFile; fileRef = 3E893FA61BCDD138000AF4E8 /* WBTU */; settings = {ASSET_TAGS = (); }; };
 		3E893FA91BCDD149000AF4E8 /* RadioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E893FA81BCDD149000AF4E8 /* RadioViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3E893FAB1BCDD45B000AF4E8 /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E893FAA1BCDD45B000AF4E8 /* CalenderViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3E893FAD1BCDD469000AF4E8 /* SongHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E893FAC1BCDD469000AF4E8 /* SongHistoryViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -50,7 +50,7 @@
 		3E17B4651BC4993A00FE1B94 /* WBTUUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WBTUUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E17B4691BC4993A00FE1B94 /* WBTUUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBTUUITests.swift; sourceTree = "<group>"; };
 		3E17B46B1BC4993A00FE1B94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3E893FA61BCDD138000AF4E8 /* StationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StationsViewController.swift; path = ../StationsViewController.swift; sourceTree = "<group>"; };
+		3E893FA61BCDD138000AF4E8 /* WBTU */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = folder; path = WBTU; sourceTree = SOURCE_ROOT; };
 		3E893FA81BCDD149000AF4E8 /* RadioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioViewController.swift; sourceTree = "<group>"; };
 		3E893FAA1BCDD45B000AF4E8 /* CalenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
 		3E893FAC1BCDD469000AF4E8 /* SongHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongHistoryViewController.swift; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		3E17B4461BC4993A00FE1B94 /* WBTU */ = {
 			isa = PBXGroup;
 			children = (
-				3E893FA61BCDD138000AF4E8 /* StationsViewController.swift */,
+				3E893FA61BCDD138000AF4E8 /* WBTU */,
 				3E17B4471BC4993A00FE1B94 /* AppDelegate.swift */,
 				3E17B44D1BC4993A00FE1B94 /* Main.storyboard */,
 				3E17B4501BC4993A00FE1B94 /* Assets.xcassets */,
@@ -272,7 +272,7 @@
 				3E893FA91BCDD149000AF4E8 /* RadioViewController.swift in Sources */,
 				3E893FAF1BCDD72E000AF4E8 /* NewsViewController.swift in Sources */,
 				3E17B4481BC4993A00FE1B94 /* AppDelegate.swift in Sources */,
-				3E893FA71BCDD138000AF4E8 /* StationsViewController.swift in Sources */,
+				3E893FA71BCDD138000AF4E8 /* WBTU in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
