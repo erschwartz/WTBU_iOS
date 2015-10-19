@@ -135,11 +135,16 @@
                         <viewControllerLayoutGuide type="bottom" id="uwC-iM-dy1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ov2-mD-gge">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jZc-iJ-gUl">
+                                <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39w-nX-wvU">
-                                <rect key="frame" x="251" y="289" width="99" height="21"/>
+                                <rect key="frame" x="111" y="481" width="99" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -149,11 +154,15 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="39w-nX-wvU" firstAttribute="centerY" secondItem="ov2-mD-gge" secondAttribute="centerY" id="6w7-Ty-EpE"/>
+                            <constraint firstItem="39w-nX-wvU" firstAttribute="centerY" secondItem="ov2-mD-gge" secondAttribute="centerY" constant="207.25" id="6w7-Ty-EpE"/>
                             <constraint firstItem="39w-nX-wvU" firstAttribute="centerX" secondItem="ov2-mD-gge" secondAttribute="centerX" id="l7e-OK-ToO"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Song History" image="first" id="oXk-yT-5oI"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="webView" destination="jZc-iJ-gUl" id="mVp-sC-ihq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bGM-FT-huf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
