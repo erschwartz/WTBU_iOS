@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
@@ -9,7 +10,7 @@
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <animations/>
@@ -43,18 +44,45 @@
                                 <rect key="frame" x="278" y="289" width="44" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvH-vL-KV8">
+                                <rect key="frame" x="263" y="475" width="75" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Pause/Play"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jTU-Rw-3FF">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="467"/>
+                                <animations/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="NHy-h7-Pcq">
+                                <rect key="frame" x="18" y="513" width="564" height="31"/>
+                                <animations/>
+                            </slider>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="jTU-Rw-3FF" firstAttribute="centerX" secondItem="k11-mc-8Gk" secondAttribute="centerX" id="2TP-of-478"/>
+                            <constraint firstItem="lvH-vL-KV8" firstAttribute="centerX" secondItem="k11-mc-8Gk" secondAttribute="centerX" id="BQ2-lG-Uel"/>
+                            <constraint firstItem="lvH-vL-KV8" firstAttribute="centerX" secondItem="NHy-h7-Pcq" secondAttribute="centerX" id="IIO-Xu-bMV"/>
+                            <constraint firstItem="NHy-h7-Pcq" firstAttribute="top" secondItem="lvH-vL-KV8" secondAttribute="bottom" constant="8" symbolic="YES" id="IO3-Ke-VKf"/>
+                            <constraint firstItem="jTU-Rw-3FF" firstAttribute="top" secondItem="yn3-RG-NeD" secondAttribute="top" id="Ukh-k6-Yga"/>
+                            <constraint firstItem="lvH-vL-KV8" firstAttribute="top" secondItem="jTU-Rw-3FF" secondAttribute="bottom" constant="8" symbolic="YES" id="YWh-13-rpF"/>
+                            <constraint firstItem="Nvf-oR-jVC" firstAttribute="top" secondItem="NHy-h7-Pcq" secondAttribute="bottom" constant="8" symbolic="YES" id="mZz-nA-9xE"/>
+                            <constraint firstItem="jTU-Rw-3FF" firstAttribute="leading" secondItem="yn3-RG-NeD" secondAttribute="leading" id="nrS-gw-JeN"/>
+                            <constraint firstItem="NHy-h7-Pcq" firstAttribute="leading" secondItem="yn3-RG-NeD" secondAttribute="leadingMargin" id="qyl-2X-pOO"/>
                             <constraint firstItem="k11-mc-8Gk" firstAttribute="centerX" secondItem="yn3-RG-NeD" secondAttribute="centerX" id="ttv-rc-UnI"/>
                             <constraint firstItem="k11-mc-8Gk" firstAttribute="centerY" secondItem="yn3-RG-NeD" secondAttribute="centerY" id="wf8-t8-D9V"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Radio" image="first" id="vEw-0g-9fZ"/>
+                    <connections>
+                        <outlet property="buttonPlay" destination="lvH-vL-KV8" id="J3m-zE-TMS"/>
+                        <outlet property="imageCoverArt" destination="jTU-Rw-3FF" id="m5J-S3-hhS"/>
+                        <outlet property="sliderVolume" destination="NHy-h7-Pcq" id="8Q7-pl-7a2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LI4-PG-ppM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -76,12 +104,12 @@
                                 <rect key="frame" x="269" y="289" width="63" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="P2K-AH-Jec" firstAttribute="centerY" secondItem="9wQ-eJ-NbM" secondAttribute="centerY" id="IzD-n4-CYi"/>
                             <constraint firstItem="P2K-AH-Jec" firstAttribute="centerX" secondItem="9wQ-eJ-NbM" secondAttribute="centerX" id="mXs-Uk-WVh"/>
@@ -109,12 +137,12 @@
                                 <rect key="frame" x="279" y="289" width="43" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="DEu-aF-pjq" firstAttribute="centerX" secondItem="Fpr-YU-Crt" secondAttribute="centerX" id="Rwk-xb-s0k"/>
                             <constraint firstItem="DEu-aF-pjq" firstAttribute="centerY" secondItem="Fpr-YU-Crt" secondAttribute="centerY" id="elX-5i-CYt"/>
@@ -142,12 +170,12 @@
                                 <rect key="frame" x="251" y="289" width="99" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="39w-nX-wvU" firstAttribute="centerY" secondItem="ov2-mD-gge" secondAttribute="centerY" id="6w7-Ty-EpE"/>
                             <constraint firstItem="39w-nX-wvU" firstAttribute="centerX" secondItem="ov2-mD-gge" secondAttribute="centerX" id="l7e-OK-ToO"/>
@@ -175,12 +203,12 @@
                                 <rect key="frame" x="266" y="289" width="69" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Mnv-Y1-nxe" firstAttribute="centerX" secondItem="Mbd-f8-Adm" secondAttribute="centerX" id="ZG8-Z7-xMG"/>
                             <constraint firstItem="Mnv-Y1-nxe" firstAttribute="centerY" secondItem="Mbd-f8-Adm" secondAttribute="centerY" id="bYN-Do-v4Y"/>

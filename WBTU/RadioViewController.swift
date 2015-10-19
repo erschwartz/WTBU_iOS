@@ -10,6 +10,10 @@ import UIKit
 
 class RadioViewController: UIViewController {
     
+    @IBOutlet weak var buttonPlay: UIButton!
+    @IBOutlet weak var sliderVolume: UISlider!
+    @IBOutlet weak var imageCoverArt: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
