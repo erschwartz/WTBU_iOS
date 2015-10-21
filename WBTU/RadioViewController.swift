@@ -17,12 +17,43 @@ class RadioViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        buttonPlay.setTitle("Play", forState: UIControlState.Normal)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func playButtonClicked(sender: AnyObject) {
+        toggle()
+        
+    }
+
+    
+    @IBAction func sliderValueChanged(sender: AnyObject) {
+        
+        RadioPlayer.sharedInstance.volume(sliderVolume.value)
+        
+    }
+    
+    func toggle() {
+        if RadioPlayer.sharedInstance.currentlyPlaying() {
+            pauseRadio()
+        } else {
+            playRadio()
+        }
+    }
+    
+    func playRadio() {
+        RadioPlayer.sharedInstance.play()
+        buttonPlay.setTitle("Pause", forState: UIControlState.Normal)
+    }
+    
+    func pauseRadio() {
+        RadioPlayer.sharedInstance.pause()
+        buttonPlay.setTitle("Play", forState: UIControlState.Normal)
+        
     }
     
 }

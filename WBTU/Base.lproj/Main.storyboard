@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -48,9 +48,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvH-vL-KV8">
-                                <rect key="frame" x="263" y="475" width="75" height="30"/>
+                                <rect key="frame" x="286" y="475" width="30" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Pause/Play"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playButtonClicked:" destination="j95-JB-hUF" eventType="touchUpInside" id="NUG-Tj-uaq"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jTU-Rw-3FF">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="467"/>
@@ -59,14 +62,17 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="NHy-h7-Pcq">
                                 <rect key="frame" x="18" y="513" width="564" height="31"/>
                                 <animations/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="j95-JB-hUF" eventType="valueChanged" id="NVv-I8-Sp8"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="jTU-Rw-3FF" firstAttribute="centerX" secondItem="k11-mc-8Gk" secondAttribute="centerX" id="2TP-of-478"/>
-                            <constraint firstItem="lvH-vL-KV8" firstAttribute="centerX" secondItem="k11-mc-8Gk" secondAttribute="centerX" id="BQ2-lG-Uel"/>
-                            <constraint firstItem="lvH-vL-KV8" firstAttribute="centerX" secondItem="NHy-h7-Pcq" secondAttribute="centerX" id="IIO-Xu-bMV"/>
+                            <constraint firstItem="lvH-vL-KV8" firstAttribute="centerX" secondItem="k11-mc-8Gk" secondAttribute="centerX" constant="1" id="BQ2-lG-Uel"/>
+                            <constraint firstItem="lvH-vL-KV8" firstAttribute="centerX" secondItem="NHy-h7-Pcq" secondAttribute="centerX" constant="1" id="IIO-Xu-bMV"/>
                             <constraint firstItem="NHy-h7-Pcq" firstAttribute="top" secondItem="lvH-vL-KV8" secondAttribute="bottom" constant="8" symbolic="YES" id="IO3-Ke-VKf"/>
                             <constraint firstItem="jTU-Rw-3FF" firstAttribute="top" secondItem="yn3-RG-NeD" secondAttribute="top" id="Ukh-k6-Yga"/>
                             <constraint firstItem="lvH-vL-KV8" firstAttribute="top" secondItem="jTU-Rw-3FF" secondAttribute="bottom" constant="8" symbolic="YES" id="YWh-13-rpF"/>
