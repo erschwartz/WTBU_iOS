@@ -6,6 +6,7 @@ use_frameworks!
 target 'WBTU' do
     pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
     pod 'SwiftHTTP', '~> 1.0.0'
+    pod 'SWXMLHash', '~> 2.0.0'
 end
 
 target 'WBTUTests' do

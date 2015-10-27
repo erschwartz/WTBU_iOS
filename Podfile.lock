@@ -1,10 +1,12 @@
 PODS:
   - SwiftHTTP (1.0.1)
   - SwiftyJSON (2.3.0)
+  - SWXMLHash (2.0.2)
 
 DEPENDENCIES:
   - SwiftHTTP (~> 1.0.0)
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+  - SWXMLHash (~> 2.0.0)
 
 EXTERNAL SOURCES:
   SwiftyJSON:
@@ -18,5 +20,6 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   SwiftHTTP: 1c8bb7cf3969c750721392fac1e40a6415e8526e
   SwiftyJSON: cacfe0373d584585716bd1d43202c24cc66afd65
+  SWXMLHash: 9e6bd7db2e8275eaf3d2082265623d6e749e169d
 
 COCOAPODS: 0.39.0

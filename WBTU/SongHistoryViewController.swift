@@ -8,42 +8,41 @@
 
 import UIKit
 
-class SongHistoryViewController: UIViewController {
+class SongHistoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var songTableView: UITableView!
+    
+    var recentlyPlayed: [[String: AnyObject]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        
-        //added Spinatron website to the songhistory tab
-        //We probably want to change this,
-        let url = NSURL(string: "http://spinitron.com/radio/playlist.php?station=wtbu&showid=662")
-        let task = NSURLSession.sharedSession().dataTaskWithURL(url!)
-            { (data, response, error) -> Void in
-        
-            if error == nil {
-                
-                let urlContent = NSString(data: data!, encoding: NSUTF8StringEncoding)
-                print(urlContent)
-                dispatch_async(dispatch_get_main_queue())
-                    {
-                        self.webView.loadHTMLString(urlContent as String!, baseURL: url)
-                    }
-                
-                
-            }
-            
-            
+
+        SpinUtil.getRecentSongs{ songs in
+            self.recentlyPlayed = songs
+            self.songTableView.reloadData()
         }
-        
-        task.resume()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // UITableViewDataSource Methods:
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return recentlyPlayed.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        print(recentlyPlayed.count)
+        let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("SongHistoryCell", forIndexPath: indexPath)
+        let row = indexPath.row
+        let songInfo = recentlyPlayed[row]
+        
+        cell.textLabel!.text = songInfo["title"] as? String
+        
+        return cell
     }
     
 }

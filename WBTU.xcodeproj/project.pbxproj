@@ -13,11 +13,13 @@
 		3E17B4541BC4993A00FE1B94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E17B4521BC4993A00FE1B94 /* LaunchScreen.storyboard */; };
 		3E17B45F1BC4993A00FE1B94 /* WBTUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E17B45E1BC4993A00FE1B94 /* WBTUTests.swift */; };
 		3E17B46A1BC4993A00FE1B94 /* WBTUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E17B4691BC4993A00FE1B94 /* WBTUUITests.swift */; };
+		3E1A59851BD713C5004B8837 /* SpinUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A59841BD713C5004B8837 /* SpinUtil.swift */; settings = {ASSET_TAGS = (); }; };
 		3E45B5D01BCDFBF3003B0008 /* StationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E45B5CF1BCDFBF3003B0008 /* StationsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3E893FA91BCDD149000AF4E8 /* RadioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E893FA81BCDD149000AF4E8 /* RadioViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3E893FAB1BCDD45B000AF4E8 /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E893FAA1BCDD45B000AF4E8 /* CalenderViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3E893FAD1BCDD469000AF4E8 /* SongHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E893FAC1BCDD469000AF4E8 /* SongHistoryViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3E893FAF1BCDD72E000AF4E8 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E893FAE1BCDD72E000AF4E8 /* NewsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3ED8F9A11BDD798100A0E1FC /* SongHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED8F9A01BDD798100A0E1FC /* SongHistoryCell.swift */; settings = {ASSET_TAGS = (); }; };
 		AE0C0EB74D55AE9FB4B9E712 /* Pods_WBTU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5B6791E3CD8C3594127603 /* Pods_WBTU.framework */; };
 		DC83824F1BD70F8B00DD0307 /* RadioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC83824E1BD70F8B00DD0307 /* RadioPlayer.swift */; settings = {ASSET_TAGS = (); }; };
 		DC8382511BD70FAC00DD0307 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8382501BD70FAC00DD0307 /* AVFoundation.framework */; };
@@ -53,11 +55,13 @@
 		3E17B4651BC4993A00FE1B94 /* WBTUUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WBTUUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E17B4691BC4993A00FE1B94 /* WBTUUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBTUUITests.swift; sourceTree = "<group>"; };
 		3E17B46B1BC4993A00FE1B94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E1A59841BD713C5004B8837 /* SpinUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinUtil.swift; sourceTree = "<group>"; };
 		3E45B5CF1BCDFBF3003B0008 /* StationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsViewController.swift; sourceTree = "<group>"; };
 		3E893FA81BCDD149000AF4E8 /* RadioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioViewController.swift; sourceTree = "<group>"; };
 		3E893FAA1BCDD45B000AF4E8 /* CalenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
 		3E893FAC1BCDD469000AF4E8 /* SongHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongHistoryViewController.swift; sourceTree = "<group>"; };
 		3E893FAE1BCDD72E000AF4E8 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		3ED8F9A01BDD798100A0E1FC /* SongHistoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongHistoryCell.swift; sourceTree = "<group>"; };
 		837A3F70254D4270F88AFE02 /* Pods-WBTU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBTU.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WBTU/Pods-WBTU.debug.xcconfig"; sourceTree = "<group>"; };
 		AF5B6791E3CD8C3594127603 /* Pods_WBTU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBTU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC83824E1BD70F8B00DD0307 /* RadioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioPlayer.swift; sourceTree = "<group>"; };
@@ -128,6 +132,8 @@
 				3E893FAC1BCDD469000AF4E8 /* SongHistoryViewController.swift */,
 				3E893FAE1BCDD72E000AF4E8 /* NewsViewController.swift */,
 				3E45B5CF1BCDFBF3003B0008 /* StationsViewController.swift */,
+				3E1A59841BD713C5004B8837 /* SpinUtil.swift */,
+				3ED8F9A01BDD798100A0E1FC /* SongHistoryCell.swift */,
 			);
 			path = WBTU;
 			sourceTree = "<group>";
@@ -353,6 +359,8 @@
 				DC83824F1BD70F8B00DD0307 /* RadioPlayer.swift in Sources */,
 				3E45B5D01BCDFBF3003B0008 /* StationsViewController.swift in Sources */,
 				3E893FAB1BCDD45B000AF4E8 /* CalenderViewController.swift in Sources */,
+				3E1A59851BD713C5004B8837 /* SpinUtil.swift in Sources */,
+				3ED8F9A11BDD798100A0E1FC /* SongHistoryCell.swift in Sources */,
 				3E893FA91BCDD149000AF4E8 /* RadioViewController.swift in Sources */,
 				3E893FAF1BCDD72E000AF4E8 /* NewsViewController.swift in Sources */,
 				3E17B4481BC4993A00FE1B94 /* AppDelegate.swift in Sources */,
