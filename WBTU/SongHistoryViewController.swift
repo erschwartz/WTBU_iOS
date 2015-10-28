@@ -21,6 +21,7 @@ class SongHistoryViewController: UIViewController, UITableViewDataSource, UITabl
         SpinUtil.getRecentSongs{ songs in
             self.recentlyPlayed = songs
             self.songTableView.reloadData()
+            self.songTableView.setNeedsDisplay()
         }
     }
     

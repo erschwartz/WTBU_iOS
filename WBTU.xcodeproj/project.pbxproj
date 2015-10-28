@@ -15,6 +15,7 @@
 		3E17B46A1BC4993A00FE1B94 /* WBTUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E17B4691BC4993A00FE1B94 /* WBTUUITests.swift */; };
 		3E1A59851BD713C5004B8837 /* SpinUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1A59841BD713C5004B8837 /* SpinUtil.swift */; settings = {ASSET_TAGS = (); }; };
 		3E45B5D01BCDFBF3003B0008 /* StationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E45B5CF1BCDFBF3003B0008 /* StationsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3E6F86991BE047F30057E462 /* SongIinfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6F86981BE047F30057E462 /* SongIinfo.swift */; settings = {ASSET_TAGS = (); }; };
 		3E893FA91BCDD149000AF4E8 /* RadioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E893FA81BCDD149000AF4E8 /* RadioViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3E893FAB1BCDD45B000AF4E8 /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E893FAA1BCDD45B000AF4E8 /* CalenderViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		3E893FAD1BCDD469000AF4E8 /* SongHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E893FAC1BCDD469000AF4E8 /* SongHistoryViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -57,6 +58,7 @@
 		3E17B46B1BC4993A00FE1B94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E1A59841BD713C5004B8837 /* SpinUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinUtil.swift; sourceTree = "<group>"; };
 		3E45B5CF1BCDFBF3003B0008 /* StationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsViewController.swift; sourceTree = "<group>"; };
+		3E6F86981BE047F30057E462 /* SongIinfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongIinfo.swift; sourceTree = "<group>"; };
 		3E893FA81BCDD149000AF4E8 /* RadioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioViewController.swift; sourceTree = "<group>"; };
 		3E893FAA1BCDD45B000AF4E8 /* CalenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
 		3E893FAC1BCDD469000AF4E8 /* SongHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongHistoryViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				3E45B5CF1BCDFBF3003B0008 /* StationsViewController.swift */,
 				3E1A59841BD713C5004B8837 /* SpinUtil.swift */,
 				3ED8F9A01BDD798100A0E1FC /* SongHistoryCell.swift */,
+				3E6F86981BE047F30057E462 /* SongIinfo.swift */,
 			);
 			path = WBTU;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				DC83824F1BD70F8B00DD0307 /* RadioPlayer.swift in Sources */,
 				3E45B5D01BCDFBF3003B0008 /* StationsViewController.swift in Sources */,
 				3E893FAB1BCDD45B000AF4E8 /* CalenderViewController.swift in Sources */,
+				3E6F86991BE047F30057E462 /* SongIinfo.swift in Sources */,
 				3E1A59851BD713C5004B8837 /* SpinUtil.swift in Sources */,
 				3ED8F9A11BDD798100A0E1FC /* SongHistoryCell.swift in Sources */,
 				3E893FA91BCDD149000AF4E8 /* RadioViewController.swift in Sources */,

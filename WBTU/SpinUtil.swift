@@ -21,33 +21,36 @@ struct SpinUtil {
     // the Spinitron website. Also can take an optional callback for when the loading is complete.
     static func getRecentSongs(onFinish: ([[String: AnyObject]] -> Void)?)  {
         var ret = [[String: AnyObject]]()
-        do {
-            let opt = try HTTP.GET(rssURL)
-            opt.start{ response in
-                if let error = response.error {
-                    print("Error getting RSS feed data: \(error)")
-                    return //also notify app of failure as needed
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            do {
+                let opt = try HTTP.GET(rssURL)
+                opt.start{ response in
+                    if let error = response.error {
+                        print("Error getting RSS feed data: \(error)")
+                        return //also notify app of failure as needed
+                    }
+                    let rssContent = response.data
+                    let xml = SWXMLHash.parse(rssContent)
+                    
+                    // Currently, only gets title and date published
+                    for item in xml["rss"]["channel"]["item"] {
+                        let dateString: String = (item["pubDate"].element?.text)!
+                        let itemMap = [
+                            "title": (item["title"].element?.text)!,
+                            "data": dateString
+                        ]
+                        ret.append(itemMap)
+                    }
+                    // Call the optional callback
+                    
+                    if let f = onFinish {
+                        dispatch_async(dispatch_get_main_queue()) { f(ret) }
+                    }
                 }
-                let rssContent = response.data
-                let xml = SWXMLHash.parse(rssContent)
-                
-                // Currently, only gets title and date published
-                for item in xml["rss"]["channel"]["item"] {
-                    let dateString: String = (item["pubDate"].element?.text)!
-                    let itemMap = [
-                        "title": (item["title"].element?.text)!,
-                        "data": dateString
-                    ]
-                    ret.append(itemMap)
-                }
-                // Call the optional callback
-                if let f = onFinish {
-                    f(ret)
-                }
+            } catch let error {
+                print("Error getting RSS feed data: \(error)")
             }
-        } catch let error {
-            print("Error getting RSS feed data: \(error)")
         }
     }
-    
 }
