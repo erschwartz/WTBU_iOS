@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SWXMLHash.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftHTTP.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2A6111EB83A349AE58E4A22F7C7D8F63</key>
+		<key>070989BD89C75979E687FCC9B69E4ACC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>330BA62359CAD4BD5518436F60FE58C7</key>
+		<key>0F11D9A1BD4CFEABB8AA04892968E69C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6D06E08AC4EC0E3261118A8CC73848BA</key>
+		<key>E8964A46EF87B3DB43834D9DB192857A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F1E5F5755E93A23F82F332415578F0D2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

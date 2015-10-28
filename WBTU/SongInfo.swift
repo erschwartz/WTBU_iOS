@@ -1,5 +1,5 @@
 //
-//  SongIinfo.swift
+//  SongInfo.swift
 //  WBTU
 //
 //  Created by Calvin Rose on 10/27/15.
