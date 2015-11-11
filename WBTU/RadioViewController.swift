@@ -8,7 +8,7 @@
 
 import UIKit
 import SwiftyJSON
-
+import AVFoundation
 class RadioViewController: UIViewController {
     
     @IBOutlet weak var buttonPlay: UIButton!
@@ -18,6 +18,19 @@ class RadioViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonPlay.setTitle("Play", forState: UIControlState.Normal)
+        //play in background
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            print("AVAudioSession Category Playback OK")
+            do {
+                try AVAudioSession.sharedInstance().setActive(true)
+                print("AVAudioSession is Active")
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
     }
     
     override func didReceiveMemoryWarning() {
